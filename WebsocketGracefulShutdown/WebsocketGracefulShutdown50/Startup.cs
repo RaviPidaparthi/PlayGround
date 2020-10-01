@@ -34,8 +34,12 @@ namespace WebsocketGracefulShutdown50
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IHostApplicationLifetime applicationLifetime)
         {
+            applicationLifetime.ApplicationStarted.Register(() => Console.WriteLine("Application started."));
+            applicationLifetime.ApplicationStopping.Register(() => Console.WriteLine("Application stopping..."));
+            applicationLifetime.ApplicationStopped.Register(() => Console.WriteLine("Application stopped."));
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
