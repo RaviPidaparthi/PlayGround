@@ -1,26 +1,26 @@
-<mxfile host="app.diagrams.net" modified="2020-10-19T22:05:47.626Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36 Edg/86.0.622.43" etag="NveDQUw5ugOZRhzXfUh7" version="13.8.0" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-19T22:18:37.154Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36 Edg/86.0.622.43" etag="6d4u-kZGjDRFcBXQ9WRZ" version="13.8.0" type="github">
   <diagram id="KlXGde7zkEmzZIoKySpo" name="Page-1">
     <mxGraphModel dx="1048" dy="678" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="ZXaE6x-KxvOJ2hFqairO-2" value="IRecognizerPool" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontSize=10;align=left;spacing=6;" vertex="1" parent="1">
+        <mxCell id="ZXaE6x-KxvOJ2hFqairO-2" value="IRecognizerPool" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontSize=10;align=left;spacing=6;verticalAlign=top;" vertex="1" parent="1">
           <mxGeometry x="110" y="150" width="330" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ZXaE6x-KxvOJ2hFqairO-3" value="IServiceDiscovery" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontSize=10;align=left;spacing=6;" vertex="1" parent="1">
+        <mxCell id="ZXaE6x-KxvOJ2hFqairO-3" value="IServiceDiscovery" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontSize=10;align=left;spacing=6;verticalAlign=top;" vertex="1" parent="1">
           <mxGeometry x="110" y="230" width="330" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ZXaE6x-KxvOJ2hFqairO-4" value="IRecognizerGrammarDiscovery" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontSize=10;align=left;spacing=6;" vertex="1" parent="1">
+        <mxCell id="ZXaE6x-KxvOJ2hFqairO-4" value="IRecognizerGrammarDiscovery" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontSize=10;align=left;spacing=6;verticalAlign=top;" vertex="1" parent="1">
           <mxGeometry x="110" y="310" width="330" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ZXaE6x-KxvOJ2hFqairO-5" value="IHotSwapperOrchestrator" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontSize=10;align=left;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="110" y="390" width="330" height="60" as="geometry" />
+        <mxCell id="ZXaE6x-KxvOJ2hFqairO-5" value="IHotSwapperOrchestrator : IAsyncDisposable&lt;br&gt;&amp;nbsp; &amp;nbsp;Task ExecuteAsync()&lt;br&gt;&amp;nbsp; &amp;nbsp;bool TryGetRecognizer&amp;lt;TResult&amp;gt;(TResult, out Func&amp;lt;CancellationToken, Task&amp;lt;IRecognizer&amp;gt;&amp;gt;, out SpeechConfigMessage)&lt;br&gt;&amp;nbsp; &amp;nbsp;bool TryGetRecognizer(Exception, int retryAttempt, out Func&amp;lt;CancellationToken, Task&amp;lt;IRecognizer&amp;gt;&amp;gt;, out SpeechConfigMessage)" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontSize=10;align=left;spacing=6;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="110" y="390" width="630" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ZXaE6x-KxvOJ2hFqairO-6" value="CircularBuffer" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontSize=10;align=left;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="110" y="470" width="330" height="60" as="geometry" />
+        <mxCell id="ZXaE6x-KxvOJ2hFqairO-6" value="CircularBuffer" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontSize=10;align=left;spacing=6;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="490" y="550" width="330" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ZXaE6x-KxvOJ2hFqairO-7" value="IRecognizerAudioBuffer&lt;br&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontSize=10;align=left;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="110" y="550" width="330" height="60" as="geometry" />
+        <mxCell id="ZXaE6x-KxvOJ2hFqairO-7" value="IRecognizerAudioBuffer : IAsyncDisposable&lt;br&gt;&amp;nbsp; &amp;nbsp;WriteAsync(audioBytes)&lt;br&gt;&amp;nbsp; &amp;nbsp;Task&amp;lt;int&amp;gt; ReadAsync(buffer, offset, count)&lt;br&gt;&amp;nbsp; &amp;nbsp;Notify(TResult)" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fontSize=10;align=left;spacing=6;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="110" y="550" width="330" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
